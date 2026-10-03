@@ -22,14 +22,14 @@ const SCENES: Record<DecisionState, { mobile: Layer[]; desktop: Layer[] }> = {
       { asset: 'sun', x: 185, y: -82, w: 264, h: 264 },
     ],
     desktop: [
-      { asset: 'mountains', x: -318, y: 210, w: 1644.2, h: 694 },
+      { asset: 'mountains', x: -318, y: 210, w: 1644.2, h: 694, fromBottom: true },
       { asset: 'sun', x: 837, y: -249, w: 554, h: 554 },
     ],
   },
   caution: {
     mobile: [{ asset: 'cautionScene', x: 0, y: 0, w: 390, h: 409 }],
     desktop: [
-      { asset: 'mountains', x: -318, y: 210, w: 1644.2, h: 694 },
+      { asset: 'mountains', x: -318, y: 210, w: 1644.2, h: 694, fromBottom: true },
       { asset: 'sun', x: 837, y: -249, w: 554, h: 554 },
       { asset: 'cloud', x: -119, y: -74, w: 508.7, h: 328 },
       { asset: 'cloud', x: 737, y: 168, w: 441.7, h: 284.8 },

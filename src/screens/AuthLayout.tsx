@@ -12,7 +12,7 @@ const SCENES: Record<'login' | 'signup', { mobile: Layer[]; desktop: Layer[] }> 
       { asset: 'sun', x: 63, y: -96, w: 264, h: 264 },
     ],
     desktop: [
-      { asset: 'mountains', x: -318, y: 210, w: 1644.2, h: 694 },
+      { asset: 'mountains', x: -318, y: 210, w: 1644.2, h: 694, fromBottom: true },
       { asset: 'sun', x: 837, y: -249, w: 554, h: 554 },
     ],
   },
