@@ -1,0 +1,16 @@
+.back {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin: -7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+}
+
+.back:hover {
+  background: color-mix(in srgb, var(--text) 12%, transparent);
+}

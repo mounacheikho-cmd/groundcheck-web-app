@@ -1,0 +1,52 @@
+.why {
+  width: 100%;
+  max-width: 332px;
+  color: var(--text-2);
+  font-size: 14px;
+}
+
+[data-theme='dark'] .why {
+  color: var(--text-3);
+}
+
+.why summary {
+  width: fit-content;
+  padding: 8px 0;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  margin-top: 6px;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.table th,
+.table td {
+  padding: 5px 4px;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+.table th {
+  font-weight: 600;
+}
+
+.table tr[data-status='breach'] td:last-child {
+  font-weight: 700;
+}
+
+.table tr[data-status='near'] td:last-child {
+  font-style: italic;
+}
+
+.note {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.35;
+}

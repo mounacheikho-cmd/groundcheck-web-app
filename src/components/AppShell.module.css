@@ -1,0 +1,24 @@
+.shell {
+  position: relative;
+  min-height: var(--full-height);
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+  display: flow-root;
+  min-height: var(--full-height);
+}
+
+@media (min-width: 1024px) {
+  .shell {
+    min-height: max(var(--full-height), 832px);
+  }
+
+  .main {
+    min-height: max(var(--full-height), 832px);
+    margin-right: 256px;
+    /* The white area of the 1280 px frame; centred when the window is wider. */
+    --stage-width: 1024px;
+  }
+}

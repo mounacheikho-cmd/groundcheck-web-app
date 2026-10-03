@@ -1,0 +1,201 @@
+/* Figma "home screen" (49:183) and "home screen desktop" (52:1648) */
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 41px 0 120px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px 0 35px;
+}
+
+.hello {
+  min-width: 0;
+  overflow: hidden;
+  font-size: 32px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-3);
+}
+
+/* Phone: names over 8 characters don't fit next to the icons at 32 px */
+@media (max-width: 1023px) {
+  .hello[data-long] {
+    font-size: 24px;
+  }
+}
+
+.icons {
+  display: flex;
+  gap: 5px;
+  margin-right: -7px;
+}
+
+.iconButton {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-3);
+}
+
+.weather {
+  margin-top: 40.6px;
+  padding: 0 21px;
+}
+
+.sectionTitle {
+  padding-left: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-3);
+}
+
+.weather .sectionTitle {
+  margin-bottom: 7.6px;
+}
+
+.tasks {
+  margin-top: 23px;
+  padding: 0 33px;
+}
+
+.tasks .sectionTitle {
+  padding-left: 2px;
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 13.5px;
+  margin: 10.6px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 324px;
+  height: 54px;
+  border-radius: var(--radius-button);
+  box-shadow: var(--shadow-button);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-3);
+  text-decoration: none;
+}
+
+.task[data-task='dig'] {
+  background: var(--task-dig);
+}
+
+.task[data-task='spray'] {
+  background: var(--task-spray);
+}
+
+.task[data-task='prune'] {
+  background: var(--task-prune);
+}
+
+.task:hover {
+  filter: brightness(1.04);
+}
+
+.thresholds {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: calc(100% - 66px);
+  max-width: 322px;
+  height: 127px;
+  margin: 45px 0 0 33px;
+  padding: 45px 31px 0 20px;
+  border-radius: var(--radius-tile);
+  background: var(--thresholds-card);
+  box-shadow: var(--shadow-tile);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-2);
+  text-decoration: none;
+}
+
+.thresholds svg {
+  margin-top: 11px;
+}
+
+[data-theme='dark'] .thresholds {
+  color: var(--text-3);
+}
+
+@media (min-width: 1024px) {
+  .content {
+    display: grid;
+    grid-template-columns: 493px 400.5px;
+    column-gap: 18px;
+    align-items: start;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 96px 0 0 52px;
+  }
+
+  .header {
+    grid-column: 1 / -1;
+    padding: 0;
+  }
+
+  .hello {
+    font-size: 77.35px;
+    font-weight: 600;
+    color: var(--on-sidebar);
+  }
+
+  .weather {
+    margin-top: 142px;
+    padding: 0 0 0 16px;
+  }
+
+  .sectionTitle {
+    padding-left: 0;
+    font-size: 30.15px;
+  }
+
+  .weather .sectionTitle {
+    margin-bottom: 10.5px;
+  }
+
+  .tasks {
+    margin-top: 149px;
+    padding: 0;
+  }
+
+  .taskList {
+    gap: 16px;
+    margin-top: 5px;
+  }
+
+  .task {
+    max-width: none;
+    height: 66.76px;
+    font-size: 24.72px;
+    box-shadow: 0 6.18px 12.36px rgba(0, 0, 0, 0.25);
+  }
+}

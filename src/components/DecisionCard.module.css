@@ -1,0 +1,102 @@
+/* Figma "result card": 332 × 192, radius 25 (desktop: 602.6 × 348.5, radius 45.4) */
+.card {
+  --s: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc(332px * var(--s));
+  max-width: 100%;
+  height: calc(192px * var(--s));
+  padding: calc(21px * var(--s)) calc(26px * var(--s)) calc(19px * var(--s));
+  border-radius: calc(25px * var(--s));
+  box-shadow: var(--shadow-card);
+  color: var(--on-go);
+}
+
+.card[data-state='go'] {
+  background: var(--gradient-go);
+}
+
+.card[data-state='caution'] {
+  background: var(--gradient-caution);
+  color: var(--on-caution);
+}
+
+.card[data-state='no-go'] {
+  background: var(--gradient-no-go);
+  color: var(--on-no-go);
+}
+
+.task {
+  font-size: calc(16px * var(--s));
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-2);
+}
+
+.refresh {
+  position: absolute;
+  top: calc(14px * var(--s));
+  right: calc(20px * var(--s));
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-2);
+}
+
+.card[data-state='no-go'] .refresh {
+  color: var(--white);
+}
+
+.refresh[data-spinning] svg {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.state {
+  margin-top: calc(-8px * var(--s));
+  font-size: calc(96px * var(--s));
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.card[data-state='caution'] .state,
+.card[data-state='no-go'] .state {
+  margin-top: calc(15px * var(--s));
+  font-size: calc(64px * var(--s));
+}
+
+.headline {
+  margin-top: auto;
+  font-size: calc(15px * var(--s));
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-3);
+}
+
+[data-theme='dark'] .headline,
+[data-theme='dark'] .task {
+  color: inherit;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    --s: 1.815;
+  }
+
+  .card[data-state='no-go'] .state {
+    color: #fffaf8;
+  }
+}

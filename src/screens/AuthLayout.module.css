@@ -1,0 +1,175 @@
+/* Log in (43:546): panel from y 507. Sign up (43:478): panel from y 396. */
+.screen {
+  position: relative;
+  min-height: var(--full-height);
+  overflow: hidden;
+  background: var(--bg-2);
+}
+
+.screen[data-variant='signup'] {
+  background: var(--sky);
+}
+
+.layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: var(--full-height);
+}
+
+.heading,
+.panel > * {
+  width: 100%;
+  max-width: 390px;
+  margin-inline: auto;
+}
+
+.back {
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  color: var(--text-3);
+}
+
+.heading {
+  margin-top: 388px;
+  padding: 0 24px 0 25px;
+  color: var(--text-3);
+}
+
+.screen[data-variant='signup'] .heading {
+  margin-top: 283px;
+  padding-left: 29px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 64.2px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin-top: 0;
+  padding-left: 48px;
+  font-family: var(--font-display);
+  font-size: 17.39px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.screen[data-variant='signup'] .subtitle {
+  padding-left: 22px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 19px;
+  padding: 59px 41px 32px;
+  border-radius: 25px 25px 0 0;
+  background: var(--panel);
+  box-shadow: var(--shadow-panel);
+}
+
+.screen[data-variant='signup'] .panel {
+  margin-top: 12px;
+  padding-top: 48px;
+}
+
+.footer {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.55;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--text);
+}
+
+.footer a {
+  text-underline-offset: 2px;
+}
+
+[data-theme='dark'] .back {
+  color: var(--text-3);
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    display: block;
+    max-width: 1280px;
+    min-height: 832px;
+    margin: 0 auto;
+  }
+
+  .back {
+    top: 33px;
+    left: 34px;
+  }
+
+  .heading {
+    position: absolute;
+    top: 142px;
+    left: 32px;
+    width: 623px;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .title {
+    padding-left: 49px;
+    font-size: 124.6px;
+  }
+
+  .subtitle {
+    margin-top: -6px;
+    padding-left: 127px;
+    font-size: 33.7px;
+  }
+
+  .panel {
+    position: absolute;
+    top: 389px;
+    left: 91px;
+    width: 442px;
+    min-height: 390px;
+    margin: 0;
+    padding: 72px 46.5px 28px;
+    border-radius: 25px;
+    box-shadow: var(--shadow-card);
+  }
+
+  .screen[data-variant='signup'] .heading {
+    top: 155px;
+    left: 107px;
+    width: 560px;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .screen[data-variant='signup'] .title {
+    padding-left: 0;
+    font-family: var(--font-sans);
+    font-size: 116px;
+  }
+
+  .screen[data-variant='signup'] .subtitle {
+    margin-top: -8px;
+    padding-left: 46px;
+    font-size: 30px;
+  }
+
+  .screen[data-variant='signup'] .panel {
+    top: 204px;
+    left: 692px;
+    width: 458px;
+    min-height: 530px;
+    padding-top: 56px;
+  }
+}

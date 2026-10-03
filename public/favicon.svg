@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="443" height="443" viewBox="0 0 443 443" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="logo circles">
+<circle id="Ellipse 5" cx="221.5" cy="221.5" r="221.5" fill="#AAD6F9"/>
+<mask id="mask0_0_62" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="444" height="444">
+<circle id="Ellipse 1" cx="221.5" cy="221.5" r="221.5" fill="#C6E6FF"/>
+</mask>
+<g mask="url(#mask0_0_62)">
+<circle id="Ellipse 6" cx="221.999" cy="175.105" r="100.274" fill="#FF8B4E"/>
+<circle id="Ellipse 3" cx="318.282" cy="381.14" r="216.013" fill="#78A88C" stroke="white" stroke-width="4.98874"/>
+<circle id="Ellipse 2" cx="17.4606" cy="451.481" r="292.34" fill="#E0F1BA" stroke="white" stroke-width="4.98874"/>
+<path id="Ellipse 4" d="M335.742 251.432C474.329 251.432 586.676 363.779 586.677 502.366C586.677 640.953 474.329 753.301 335.742 753.301C197.155 753.3 84.8084 640.953 84.8084 502.366C84.8086 363.779 197.155 251.433 335.742 251.432Z" fill="#FFB153" stroke="white" stroke-width="4.98874"/>
+</g>
+</g>
+</svg>

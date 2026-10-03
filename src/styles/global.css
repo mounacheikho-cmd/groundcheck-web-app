@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Screen height in layout px. On desktop #root is zoomed, and zoom also scales
+   viewport units, so 100dvh is divided by the scale to still fill the window. */
+:root {
+  --desktop-scale: 1;
+  --full-height: 100dvh;
+}
+
+/* Desktop: the frames are 1280 px wide. Between 1024 and 1280 px the whole design
+   is scaled evenly (down to 80 %); index.html sets --desktop-scale from the window width. */
+@media (min-width: 1024px) {
+  :root {
+    --full-height: calc(100dvh / var(--desktop-scale));
+  }
+
+  #root {
+    zoom: var(--desktop-scale);
+  }
+}
+
+/* Tablets: the prototype has phone and desktop frames only, so the phone layout
+   is shown as a centred column between 600 and 1023 px. */
+@media (min-width: 600px) and (max-width: 1023px) {
+  body {
+    background: var(--bg-2);
+  }
+
+  #root {
+    max-width: 430px;
+    margin: 0 auto;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,117 @@
+/*
+ * Design tokens taken from the GroundCheck Figma file.
+ * Light values are the Figma colour variables; dark values come from the dark-mode frames.
+ */
+:root {
+  /* Palette (Figma variable names) */
+  --background: #fffaf8;
+  --bg-2: #fcceb4;
+  --text: #616161;
+  --text-2: #434343;
+  --text-3: #1e1e1e;
+  --white: #ffffff;
+  --dark-orange: #ff8b4e;
+  --light-orange: #ffb153;
+  --dark-green: #78a88c;
+  --light-green: #e0f1ba;
+  --sky: #cbe6fb;
+
+  /* Roles */
+  --page: var(--background);
+  --header: var(--bg-2);
+  --ink: var(--text-3);
+  --ink-soft: var(--text-2);
+  --ink-muted: var(--text);
+  --primary: var(--dark-orange);
+  /* Dark text on the orange: white on #ff8b4e is only 2.3:1, #1e1e1e is 7:1 (WCAG AA) */
+  --on-primary: var(--text-3);
+  --panel: var(--background);
+  --stat-card: var(--bg-2);
+  --task-dig: var(--bg-2);
+  --task-spray: var(--light-green);
+  --task-prune: var(--light-orange);
+  --thresholds-card: var(--sky);
+  --secondary-border: var(--dark-green);
+  --field-line: #d9d9d9;
+  --sidebar: var(--dark-orange);
+  --on-sidebar: var(--text-3);
+  --scrim: rgba(97, 97, 97, 0.5);
+
+  --gradient-weather: linear-gradient(218.1deg, #cbe4fb 43.22%, #e0f1ba 96.42%);
+  --gradient-go: linear-gradient(133.19deg, #e0f1ba 5.33%, #78a88c 176.1%);
+  --gradient-caution: linear-gradient(133.19deg, #fff099 5.33%, #ffc286 176.1%);
+  --gradient-no-go: linear-gradient(133.19deg, #ffbcbc 5.33%, #e75254 66.09%, #d40004 176.1%);
+  --gradient-thresholds: linear-gradient(144.41deg, #fcceb4 8.99%, #ff8b4e 57.53%);
+  --result-go-bg: var(--bg-2);
+  --result-caution-bg: var(--bg-2);
+  --result-no-go-bg: linear-gradient(to bottom, #616161, #cbe6fb 27.13%);
+  --on-go: var(--text-2);
+  --on-caution: var(--text-2);
+  --on-no-go: var(--text-3);
+
+  /* Threshold rows */
+  --row-wind: var(--light-green);
+  --row-rain: var(--sky);
+  --row-temp: var(--bg-2);
+
+  /* Effects */
+  --shadow-card: 0 4px 5px 2.5px rgba(0, 0, 0, 0.15);
+  --shadow-button: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+  --shadow-panel: 0 -4px 5px 2.5px rgba(0, 0, 0, 0.15);
+  --shadow-tile: 0 4px 6px 0 rgba(0, 0, 0, 0.25);
+
+  /* Shape and type */
+  --radius-button: 25px;
+  --radius-card: 25px;
+  --radius-tile: 20px;
+  --font-sans: 'Inter Variable', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Istok Web', 'Inter Variable', system-ui, sans-serif;
+  --focus-ring: 0 0 0 3px var(--page), 0 0 0 5px var(--ink);
+
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --background: #3a3435;
+  --bg-2: #232323;
+  --text: #d9d3d0;
+  --text-2: #faf9f6;
+  --text-3: #faf9f6;
+  --dark-orange: #ab4f1d;
+  --light-orange: #c07522;
+  --dark-green: #48825e;
+  --light-green: #82a254;
+  --sky: #384d5a;
+
+  --on-primary: var(--white);
+  --stat-card: #7e5c4e;
+  --task-dig: #232323;
+  --field-line: #8a8482;
+  --secondary-border: #faf9f6;
+  --sidebar: #ab4f1d;
+  --on-sidebar: #faf9f6;
+  --scrim: rgba(217, 217, 217, 0.5);
+
+  --gradient-weather: #384d5a;
+  --gradient-go: #82a254;
+  --gradient-caution: #ce9f3a;
+  --gradient-no-go: #96252a;
+  --gradient-thresholds: #232323;
+  --result-go-bg: #232323;
+  --result-caution-bg: #4f4242;
+  --result-no-go-bg: linear-gradient(to bottom, #384d5a, #393438 27.13%);
+  --on-go: #faf9f6;
+  --on-caution: #faf9f6;
+  --on-no-go: #faf9f6;
+
+  --row-wind: #82a254;
+  --row-rain: #384d5a;
+  --row-temp: #7e5c4e;
+
+  --shadow-card: 0 3px 7px 2.5px rgba(217, 217, 217, 0.25);
+  --shadow-button: 0 5px 10px 0 rgba(217, 217, 217, 0.25);
+  --shadow-panel: 0 -4px 5px 2.5px rgba(217, 217, 217, 0.15);
+  --shadow-tile: 0 0 6px 0 rgba(217, 217, 217, 0.25);
+
+  color-scheme: dark;
+}

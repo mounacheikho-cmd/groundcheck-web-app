@@ -1,0 +1,47 @@
+/* Figma "panel" tiles: 100 × 81, 16 px apart (desktop: 180.4 × 146.1, 70.6 px apart) */
+.stats {
+  --s: 1;
+  display: flex;
+  gap: calc(16px * var(--s));
+  margin: 0;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100px * var(--s));
+  height: calc(81px * var(--s));
+  border-radius: calc(24.15px * var(--s));
+  background: var(--stat-card-bg, var(--stat-card));
+  box-shadow: var(--shadow-card);
+  color: var(--text-2);
+  font-size: calc(18.5px * var(--s));
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+[data-theme='dark'] .tile {
+  color: var(--text-3);
+}
+
+.tile dt {
+  font-weight: 500;
+}
+
+.tile dd {
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .stats {
+    --s: 1.8;
+    gap: 70.6px;
+  }
+
+  .tile {
+    color: var(--text-3);
+  }
+}

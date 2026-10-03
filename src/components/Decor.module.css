@@ -1,0 +1,29 @@
+.decor {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.frame {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.frame[data-align='center'] {
+  left: 50%;
+  margin-left: calc(var(--frame-width) / -2);
+}
+
+/* Desktop: the frame starts at the left edge of the design area, which is centred
+   once the window is wider than the design (--stage-width, set by AppShell). */
+.frame[data-align='left'] {
+  left: max(0px, (100% - var(--stage-width, var(--frame-width))) / 2);
+}
+
+.layer {
+  position: absolute;
+  max-width: none;
+}

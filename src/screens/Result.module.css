@@ -1,0 +1,129 @@
+/* Figma "go screen" (52:175), "caution screen" (52:547), "no-go screen" (52:491) and desktop frames */
+.background {
+  position: absolute;
+  inset: 0;
+}
+
+.background[data-state='go'] {
+  background: var(--result-go-bg);
+}
+
+.background[data-state='caution'] {
+  background: var(--result-caution-bg);
+}
+
+.background[data-state='no-go'] {
+  background: var(--result-no-go-bg);
+}
+
+.panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: calc(var(--full-height) - 320px);
+  margin: 320px 0 0;
+  padding: 23px 29px 40px;
+  border-radius: 25px 25px 0 0;
+  background: var(--panel);
+  box-shadow: var(--shadow-panel);
+}
+
+.back {
+  align-self: flex-start;
+  margin: -7px 0 0 -11px;
+}
+
+.panel > section {
+  margin-top: 0;
+}
+
+.panel > dl {
+  margin-top: 30px;
+}
+
+.edit {
+  margin-top: 27px;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 332px;
+  margin-top: 18px;
+}
+
+.source {
+  margin-top: 6px;
+  font-size: 12.5px;
+  color: var(--text);
+}
+
+.source a {
+  color: inherit;
+}
+
+.status {
+  margin-top: 60px;
+  max-width: 300px;
+  font-size: 16px;
+  text-align: center;
+  color: var(--text-2);
+}
+
+[data-theme='dark'] .status {
+  color: var(--text-3);
+}
+
+.retry {
+  margin-top: 12px;
+  padding: 8px 18px;
+  border: 1px solid currentColor;
+  border-radius: 20px;
+  background: transparent;
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .panel {
+    align-items: flex-start;
+    max-width: 1024px;
+    min-height: 0;
+    margin: 0 auto;
+    padding: 32px 0 60px 42px;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .back {
+    margin: 0 0 91px 0;
+  }
+
+  .panel > section {
+    margin-left: 60px;
+  }
+
+  .panel > dl {
+    margin: 32px 0 0 56px;
+  }
+
+  .panel[data-state='no-go'] {
+    --stat-card-bg: linear-gradient(160deg, #cbe6fb, #e0f1ba);
+  }
+
+  [data-theme='dark'] .panel[data-state='no-go'] {
+    --stat-card-bg: #232323;
+  }
+
+  .meta {
+    max-width: 602px;
+    margin: 20px 0 0 60px;
+    padding: 12px 16px;
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--background) 88%, transparent);
+  }
+}

@@ -1,0 +1,33 @@
+/* Log in: labels at panel +59 and +118, button 35 px under the last line (Figma 43:546) */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.signup {
+  gap: 38px;
+}
+
+.submit {
+  align-self: center;
+  width: calc(100% + 16px);
+  margin-top: -3px;
+}
+
+.signup .submit {
+  margin-top: 6px;
+}
+
+@media (min-width: 1024px) {
+  .form {
+    gap: 48px;
+  }
+
+  .submit {
+    height: 61.2px;
+    max-width: 367px;
+    margin-top: 0;
+    font-size: 22.7px;
+  }
+}

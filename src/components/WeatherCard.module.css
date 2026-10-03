@@ -1,0 +1,95 @@
+/* Figma "weather forecast": 348 × 163, radius 25 (desktop: 477 × 223, radius 34) */
+.card {
+  --s: 1;
+  position: relative;
+  width: calc(348px * var(--s));
+  max-width: 100%;
+  height: calc(163px * var(--s));
+  padding: calc(21px * var(--s)) calc(21px * var(--s));
+  overflow: hidden;
+  border-radius: calc(25px * var(--s));
+  background: var(--gradient-weather);
+  box-shadow: var(--shadow-card);
+  color: var(--text-2);
+}
+
+[data-theme='dark'] .card {
+  color: var(--text-3);
+}
+
+.sun {
+  position: absolute;
+  left: calc(202.2px * var(--s));
+  top: calc(-58.9px * var(--s));
+  width: calc(166.5px * var(--s));
+  height: calc(166.5px * var(--s));
+}
+
+.cloud {
+  position: absolute;
+  left: calc(206.06px * var(--s));
+  top: calc(39.56px * var(--s));
+  width: calc(173.15px * var(--s));
+  height: calc(116.05px * var(--s));
+}
+
+.place {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: calc(13px * var(--s));
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.pin {
+  transform: rotate(0deg);
+}
+
+.temp {
+  position: relative;
+  margin-top: calc(8px * var(--s));
+  font-size: calc(51.6px * var(--s));
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.tempValue {
+  font-weight: 700;
+}
+
+.tempUnit {
+  font-weight: 500;
+}
+
+.details {
+  position: relative;
+  margin-top: calc(13px * var(--s));
+  font-size: calc(12px * var(--s));
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.message {
+  position: relative;
+  margin-top: calc(24px * var(--s));
+  max-width: 60%;
+  font-size: calc(15px * var(--s));
+}
+
+.retry {
+  margin-top: 8px;
+  padding: 6px 14px;
+  border: 1px solid currentColor;
+  border-radius: 20px;
+  background: transparent;
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    --s: 1.3707;
+  }
+}

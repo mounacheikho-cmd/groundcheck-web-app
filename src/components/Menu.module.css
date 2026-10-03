@@ -1,0 +1,112 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* Desktop sidebar (Figma "desktop menu": 256 px, dark orange) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 256px;
+  padding: 106px 20px 0 34px;
+  background: var(--sidebar);
+  box-shadow: -3px 0 4px rgba(0, 0, 0, 0.25);
+}
+
+/* NO-GO desktop frame: the sidebar takes the sky gradient */
+.sidebar[data-tone='sky'] {
+  --on-sidebar: var(--text-3);
+  background: linear-gradient(to bottom, #d2e9e5, #e0f1ba);
+  box-shadow: none;
+}
+
+[data-theme='dark'] .sidebar[data-tone='sky'] {
+  background: #384d5a;
+}
+
+.list[data-variant='sidebar'] .item {
+  gap: 30px;
+  height: 49.3px;
+  font-size: 18.09px;
+  color: var(--on-sidebar);
+}
+
+.list[data-variant='sidebar'] .item.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Mobile drawer (Figma "menu screen") */
+.drawer {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.drawer::backdrop {
+  background: var(--scrim);
+  backdrop-filter: blur(2px);
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(302px, 80vw);
+  padding: 35px 20px 0 16px;
+  border-radius: 40px 0 0 40px;
+  background: var(--background);
+  color: var(--text-3);
+}
+
+.close {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin: -7px 0 0 -7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: var(--text);
+}
+
+.list[data-variant='drawer'] {
+  margin-top: 26px;
+  padding-left: 20px;
+}
+
+.list[data-variant='drawer'] .item {
+  gap: 15px;
+  height: 49.5px;
+  font-size: 18px;
+  color: var(--text-3);
+}
